@@ -19,10 +19,6 @@ public class UserDao {
 		return repo.save(user);
 
 	}
-
-	
-	
-	
 	public User updateUser(int id, User user) {
 		Optional<User> optional = repo.findById(id);
 		if (optional.isPresent()) {
@@ -30,11 +26,7 @@ public class UserDao {
 			return repo.save(user);
 		}
 		return null;
-
 	}
-	
-	
-
 	public User findUserById(int id) {
 		Optional<User> optional = repo.findById(id);
 		if (optional.isPresent()) {
